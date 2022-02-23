@@ -22,8 +22,11 @@ const SignIn = ({ navigation, route }) => {
   const [request, response, promptAsync] = Google.useAuthRequest({
     anrdoidClientId: process.env.REACT_APP_ANDROID_CLIENT_ID,
     iosClientId: process.env.REACT_APP_IOS_CLIENT_ID,
-    expoClientId:
-      "23752230763-ft9rhgrkfuqb7c2fbc249e5ip0n4c41l.apps.googleusercontent.com"
+    expoClientId: process.env.REACT_APP_EXPO_CLIENT_ID
+    // expoClientId:
+    //   "23752230763-ft9rhgrkfuqb7c2fbc249e5ip0n4c41l.apps.googleusercontent.com"
+
+    // env variables are not working still
   });
 
   // TODO : Find a way for environment variables to work
